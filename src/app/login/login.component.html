@@ -1,14 +1,17 @@
+<h2>Login</h2>
+<form (ngSubmit)="onLogin()">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" #email required #emailInput> <div *ngIf="email && !isValidEmail(email)">
+    Email inválido.
+  </div>
 
-    <h2>Login</h2>
-    <form>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+  <label for="password">Senha:</label>
+  <input type="password" id="password" name="password" #password required>
+  <div *ngIf="password.length < 6">
+    Senha precisa ter no mínimo 6 caracteres.
+  </div>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Entrar</button>
-        <a routerLink="/esqueci-senha">Esqueci a senha</a>
-        <button routerLink="/cadastro">Cadastrar-me</button>
-    </form>
-
+  <button type="submit">Entrar</button>
+  <button routerLink="/esqueci-senha">Esqueci a senha</button>
+  <button routerLink="/cadastro">Cadastrar-me</button>
+</form>

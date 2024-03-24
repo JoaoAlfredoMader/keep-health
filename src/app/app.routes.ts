@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../app/login/login.component';
 import { CadastroComponent } from '../app/cadastro/cadastro.component';
 
+
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent }
@@ -10,6 +11,6 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule,]
 })
 export class AppRoutingModule { }
